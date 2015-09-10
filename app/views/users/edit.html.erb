@@ -1,0 +1,16 @@
+<%= form_for @user do |f| %>
+  <%= render 'error_messages' %>
+  <p>
+  <%= f.label :username, "Please enter a username:" %>
+  <%= f.text_field :username %>
+  </p>
+  <p>
+  <%= f.label :email, "Please enter your email address:" %>
+  <%= f.email_field :email, placeholder: "foobar@foo.bar" %>
+  </p>
+  <p>
+  <%= f.label :password, "Please enter a password:" %>
+  <%= f.password_field :password %>
+  </p>
+  <%= f.submit "Update user" %>
+<% end %>
